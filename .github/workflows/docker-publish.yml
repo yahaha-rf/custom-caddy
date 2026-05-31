@@ -7,6 +7,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+  schedule:
+    # Daily during a quiet local window; avoid minute 0 because GitHub Actions
+    # scheduled runs can be delayed around the start of each hour.
+    - cron: '37 3 * * *'
+      timezone: Asia/Shanghai
 
 jobs:
   build-and-push:
