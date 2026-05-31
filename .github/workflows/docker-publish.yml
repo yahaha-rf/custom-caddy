@@ -8,9 +8,9 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    # Daily during a quiet local window; avoid minute 0 because GitHub Actions
+    # Weekly on Saturday during a quiet local window; avoid minute 0 because GitHub Actions
     # scheduled runs can be delayed around the start of each hour.
-    - cron: '37 3 * * *'
+    - cron: '37 3 * * 6'
       timezone: Asia/Shanghai
 
 jobs:
