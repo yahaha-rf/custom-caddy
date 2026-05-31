@@ -10,7 +10,7 @@ on:
   schedule:
     # Weekly on Saturday during a quiet local window; avoid minute 0 because GitHub Actions
     # scheduled runs can be delayed around the start of each hour.
-    - cron: '37 3 * * 6'
+    - cron: '37 3 * * 0'
       timezone: Asia/Shanghai
 
 jobs:
